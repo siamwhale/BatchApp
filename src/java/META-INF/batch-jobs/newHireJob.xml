@@ -1,0 +1,12 @@
+<job id="newHireJob" xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="1.0">
+    <properties>
+        <property name="file" value="/META-INF/newHiredata.csv" />
+    </properties>
+    <step id="firstStep" >
+        <chunk item-count="3">
+            <reader ref="newHireItemReader"/>
+            <processor ref="newHireItemProcessor"/>
+            <writer ref="newHireItemWriter"/>
+        </chunk>    
+    </step>
+</job>
